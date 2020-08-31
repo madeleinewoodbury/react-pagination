@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Pagination = ({ currentPage, pages, nextPage, prevPage }) => {
+const Pagination = ({ currentPage, pages, nextPage, prevPage, setPage }) => {
   const getPages = () => {
     const pagesArr = [];
     for (let i = 1; i <= pages; i++) {
@@ -10,6 +10,7 @@ const Pagination = ({ currentPage, pages, nextPage, prevPage }) => {
     return pagesArr.map((page) => (
       <div
         className={page === currentPage + 1 ? 'page active' : 'page'}
+        onClick={(e) => setPage(page - 1)}
         key={page}
       >
         {page}

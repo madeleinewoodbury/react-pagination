@@ -45,6 +45,11 @@ body {
   padding: 1rem;
   font-size: 1.2rem;
   color: rgb(221, 220, 220);
+  cursor: pointer;
+}
+
+.page:hover {
+  color: rgb(64, 170, 170);
 }
 
 .page.active {

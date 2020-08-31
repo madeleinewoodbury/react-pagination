@@ -39,6 +39,10 @@ const App = () => {
       : setCurrenPage(currentPage - 1);
   };
 
+  const setPage = (page) => {
+    setCurrenPage(page);
+  };
+
   return (
     <div className="container">
       <Posts posts={postsOnPage} />
@@ -47,6 +51,7 @@ const App = () => {
         pages={numOfPages}
         nextPage={nextPage}
         prevPage={prevPage}
+        setPage={setPage}
       />
     </div>
   );
