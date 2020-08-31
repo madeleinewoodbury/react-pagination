@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Posts from './Posts';
 import Pagination from './Pagination';
+import './App.css';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -10,9 +11,6 @@ const App = () => {
   const [postsPerPage] = useState(10);
   const [numOfPages, setNumOfPages] = useState(0);
 
-  // const updatePages = () => {
-
-  // };
   useEffect(() => {
     posts.length < 1 && getPosts();
     numOfPages === 0 && setNumOfPages(posts.length / postsPerPage);
